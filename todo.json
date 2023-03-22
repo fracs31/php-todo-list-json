@@ -1,0 +1,14 @@
+[
+    {
+        "task": "Fare la lavatrice",
+        "success": true
+    },
+    {
+        "task": "Pulire il pavimento",
+        "success": true
+    },
+    {
+        "task": "Andare in farmacia",
+        "success": false
+    }
+]

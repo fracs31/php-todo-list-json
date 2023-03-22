@@ -13,7 +13,7 @@
 <body>
     <!-- App -->
     <div id="app">
-        {{ message }}
+        
     </div>
     <!-- JavaScript -->
     <script src="./app.js"></script>
