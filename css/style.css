@@ -1,0 +1,95 @@
+/* Regole generali */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul, ol, menu {
+    list-style-type: none;
+}
+
+/* Body */
+body {
+    background-color: #001632;
+}
+
+/* Container */
+.container {
+    max-width: 585px;
+    margin: 0px auto;
+}
+
+/* Main */
+.main-content {
+    padding-top: 100px;
+}
+
+/* Contenuto */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Titolo */
+.title {
+    color: #6E777E;
+    font-size: 58px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* Todo List */
+.todo-list {
+    background-color: white;
+    border-radius: 4px;
+}
+
+/* Task */
+.task {
+    padding: 10px;
+    border-bottom: 1px solid black;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Cancella task */
+.task__delete {
+    color: white;
+    background-color: #DC3545;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Input */
+.input {
+    display: flex;
+}
+
+/* Input text */
+.text {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid white;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+/* Bottone */
+.btn {
+    padding: 10px;
+    font-size: 16px;
+    background-color: transparent;
+    border: 1px solid #F1BC16;
+    color: #F1BC16;
+    cursor: pointer;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
