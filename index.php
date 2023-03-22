@@ -34,7 +34,7 @@
                             <!-- Nome della task -->
                             <span class="task__name" v-bind:class="(task.success) ? 'done' : ''" v-on:click="changeStatus(i)">{{ task.task }}</span>
                             <!-- Cancellazione della task -->
-                            <span class="task__delete"><i class="fa-solid fa-trash"></i></span>
+                            <span class="task__delete" name="delete" v-on:click="deleteTask(i)"><i class="fa-solid fa-trash"></i></span>
                         </li>
                     </ul>
                     <!-- Input -->

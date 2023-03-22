@@ -30,7 +30,7 @@ createApp({
         //Metodo per inserire una nuova task
         newTask() {
             //Task da salvare
-            task = {
+            $task = {
                 submit: this.input, //submit
             };
             //
@@ -41,14 +41,34 @@ createApp({
             })
             .then((res) => {
                 const { data } = res; //salvo i dati ricevuti dal server
-                console.log(data);
                 this.tasks = []; //azzero la todo list
                 //Ciclo
                 for (let i = 0; i < data.length; i++) {
                     this.tasks.push(data[i]); //memorizzo le tasks ricevute dal server dentro l'array di tasks
                 }
             });
-        }
+        },
+        //Metodo per cancellare una task
+        deleteTask(index) {
+            //Task da salvare
+            $task = {
+                delete: index, //submit
+            };
+            //
+            axios.post("./server.php", $task, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            })
+            .then((res) => {
+                const { data } = res; //salvo i dati ricevuti dal server
+                this.tasks = []; //azzero la todo list
+                //Ciclo
+                for (let i = 0; i < data.length; i++) {
+                    this.tasks.push(data[i]); //memorizzo le tasks ricevute dal server dentro l'array di tasks
+                }
+            });
+        },
     },
     //Mounted
     mounted() {
