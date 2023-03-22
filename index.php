@@ -32,7 +32,7 @@
                         <!-- Task -->
                         <li class="task" v-for="(task, i) in tasks">
                             <!-- Nome della task -->
-                            <span class="task__name" v-bind:class="(task.success) ? '' : 'done'" v-on:click="changeStatus(i)">{{ task.task }}</span>
+                            <span class="task__name" v-bind:class="(task.success) ? 'done' : ''" v-on:click="changeStatus(i)">{{ task.task }}</span>
                             <!-- Cancellazione della task -->
                             <span class="task__delete"><i class="fa-solid fa-trash"></i></span>
                         </li>
@@ -40,9 +40,9 @@
                     <!-- Input -->
                     <div class="input">
                         <!-- Input -->
-                        <input class="text" type="text" placeholder="Inserisci elemento...">
+                        <input class="text" type="text" placeholder="Inserisci elemento..." v-model="input">
                         <!-- Bottone -->
-                        <button class="btn">Inserisci</button>
+                        <button class="btn" v-on:click="newTask()" name="submit" v-bind:value="input">Inserisci</button>
                     </div>
                 </div>
             </div>

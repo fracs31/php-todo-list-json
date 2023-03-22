@@ -1,14 +1,1 @@
-[
-    {
-        "task": "Fare la lavatrice",
-        "success": true
-    },
-    {
-        "task": "Pulire il pavimento",
-        "success": true
-    },
-    {
-        "task": "Andare in farmacia",
-        "success": false
-    }
-]
+[{"task":"Fare la lavatrice","success":true},{"task":"Pulire il pavimento","success":true},{"task":"Andare in farmacia","success":false},{"task":"ciao","success":false},{"task":"come stai","success":false}]
