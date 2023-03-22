@@ -30,23 +30,9 @@
                     <!-- Todo List -->
                     <ul class="todo-list">
                         <!-- Task -->
-                        <li class="task">
+                        <li class="task" v-for="(task, i) in tasks">
                             <!-- Nome della task -->
-                            <span class="task__name">Fare la lavatrice</span>
-                            <!-- Cancellazione della task -->
-                            <span class="task__delete"><i class="fa-solid fa-trash"></i></span>
-                        </li>
-                        <!-- Task -->
-                        <li class="task">
-                            <!-- Nome della task -->
-                            <span class="task__name">Fare la lavatrice</span>
-                            <!-- Cancellazione della task -->
-                            <span class="task__delete"><i class="fa-solid fa-trash"></i></span>
-                        </li>
-                        <!-- Task -->
-                        <li class="task">
-                            <!-- Nome della task -->
-                            <span class="task__name">Fare la lavatrice</span>
+                            <span class="task__name" v-bind:class="(task.success) ? '' : 'done'" v-on:click="changeStatus(i)">{{ task.task }}</span>
                             <!-- Cancellazione della task -->
                             <span class="task__delete"><i class="fa-solid fa-trash"></i></span>
                         </li>

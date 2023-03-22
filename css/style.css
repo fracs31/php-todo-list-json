@@ -57,6 +57,16 @@ body {
     align-items: center;
 }
 
+/* Nome della task */
+.task__name {
+    cursor: pointer;
+}
+
+/* Task svolta */
+.done {
+    text-decoration: line-through;
+}
+
 /* Cancella task */
 .task__delete {
     color: white;
