@@ -25,7 +25,24 @@ createApp({
         },
         //Metodo per cambiare lo stato di una task
         changeStatus(index) {
-            this.tasks[index].success = !this.tasks[index].success; //cambio lo stato della task da "true" a "false" e viceversa
+            //Task da salvare
+            $task = {
+                status: index, //stato
+            };
+            //
+            axios.post("./server.php", $task, {
+                headers: {
+                    "Content-Type": "multipart/form-data",
+                },
+            })
+            .then((res) => {
+                const { data } = res; //salvo i dati ricevuti dal server
+                this.tasks = []; //azzero la todo list
+                //Ciclo
+                for (let i = 0; i < data.length; i++) {
+                    this.tasks.push(data[i]); //memorizzo le tasks ricevute dal server dentro l'array di tasks
+                }
+            });
         },
         //Metodo per inserire una nuova task
         newTask() {
@@ -52,7 +69,7 @@ createApp({
         deleteTask(index) {
             //Task da salvare
             $task = {
-                delete: index, //submit
+                delete: index, //delete
             };
             //
             axios.post("./server.php", $task, {
