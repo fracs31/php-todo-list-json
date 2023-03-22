@@ -30,8 +30,8 @@ createApp({
         //Metodo per inserire una nuova task
         newTask() {
             //Task da salvare
-            $task = {
-                task: this.input, //nome della task
+            task = {
+                submit: this.input, //submit
             };
             //
             axios.post("./server.php", $task, {
