@@ -26,11 +26,11 @@ createApp({
         //Metodo per cambiare lo stato di una task
         changeStatus(index) {
             //Task da salvare
-            $task = {
+            const task = {
                 status: index, //stato
             };
-            //
-            axios.post("./server.php", $task, {
+            //Chiamata al server
+            axios.post("./server.php", task, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -47,11 +47,11 @@ createApp({
         //Metodo per inserire una nuova task
         newTask() {
             //Task da salvare
-            $task = {
+            const task = {
                 submit: this.input, //submit
             };
-            //
-            axios.post("./server.php", $task, {
+            //Chiamata al server
+            axios.post("./server.php", task, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -68,11 +68,11 @@ createApp({
         //Metodo per cancellare una task
         deleteTask(index) {
             //Task da salvare
-            $task = {
+            const task = {
                 delete: index, //delete
             };
-            //
-            axios.post("./server.php", $task, {
+            //Chiamata al server
+            axios.post("./server.php", task, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
