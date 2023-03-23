@@ -42,7 +42,7 @@
                         <!-- Input -->
                         <input class="text" type="text" placeholder="Inserisci elemento..." v-model="input">
                         <!-- Bottone -->
-                        <button class="btn" v-on:click="newTask()" name="submit" v-bind:value="input">Inserisci</button>
+                        <button class="btn" v-on:click="newTask()">Inserisci</button>
                     </div>
                 </div>
             </div>
