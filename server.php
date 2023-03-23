@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 //Se si vuole cancellare una task
 if (isset($_POST['delete'])) {
     $index = $_POST['delete']; //salvo l'indice della task
-    unset($todo_list[$index]); //elimino la task
+    \array_splice($todo_list, $index, 1); //elimino la task
     $new_todo_list = json_encode($todo_list); //trasformo l'array associativo in una stringa
     file_put_contents("./todo.json", $new_todo_list); //inserisco la stringa nel file json
     $todo_string = file_get_contents("./todo.json"); //prendo i dati da "todo.json"
